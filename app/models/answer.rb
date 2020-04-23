@@ -36,4 +36,14 @@ class Answer < ApplicationRecord
   #
 
   validates_presence_of :statement, :answer_type, :display_order
+  #
+  # instance methods
+  #
+
+  def to_s
+    "Course#{question.lesson.course.id}: " + question.lesson.course.name + " -> " +
+      "Lesson#{question.lesson.id}: " + question.lesson.name + " -> " +
+      "Question#{question.statement.id}: " + question.statement +
+      "Answer#{id}: " + statement
+  end
 end

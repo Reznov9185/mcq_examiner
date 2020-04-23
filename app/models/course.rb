@@ -21,4 +21,12 @@ class Course < ApplicationRecord
   #
 
   validates_presence_of :name
+
+  #
+  # instance methods
+  #
+
+  def display_name
+    "Course(#{id}): " + name
+  end
 end
