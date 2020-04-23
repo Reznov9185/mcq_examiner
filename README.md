@@ -17,18 +17,26 @@ Clone this repository,
 5. Run `rails db:create` & `rails db:migrate` (check for any error on the way!)
 6. Finally run, `rails s`, Hurray!
 
-##### Goals
+##### Goals & Scope
 
-###### Learning Pointers
+- E-Learning Management System
+    - There will be multiple courses offered
+    - Each course will have multiple lesson
+    - Each lesson will be 10 questions
+    - Questions will be MCQ in nature
+    - After finishing each lesson show result of the lesson finished
+    - Only admins are allowed to manage course, lesson and questions
+
+##### Learning Pointers
 
 - `react.js`
 
-###### TODO
+##### TODO
 
 1. More `test` code coverage
 2. Integrate `deployment` tool like `capistrano` for easier deployments
 3. `CI/CD` integration
 4. Better understanding on `react.js`
 
-Notes:
+###### Notes:
 * Make sure your default `3000` port is free, if not you can free it, or config app-server `puma` to run on another port.
