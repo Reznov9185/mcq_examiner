@@ -2,12 +2,13 @@
 #
 # Table name: questions
 #
-#  id         :bigint           not null, primary key
-#  marks      :decimal(, )
-#  statement  :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  lesson_id  :bigint           not null
+#  id            :bigint           not null, primary key
+#  display_order :bigint           default(0), not null
+#  marks         :decimal(, )
+#  statement     :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  lesson_id     :bigint           not null
 #
 # Indexes
 #
@@ -24,4 +25,10 @@ class Question < ApplicationRecord
 
   belongs_to :lesson
   has_many :answers, dependent: :destroy
+
+  #
+  # validations
+  #
+
+  validates_presence_of :statement, :marks, :lesson_id, :display_order
 end

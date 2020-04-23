@@ -3,8 +3,8 @@
 # Table name: answers
 #
 #  id            :bigint           not null, primary key
-#  answer_type   :integer
-#  display_order :integer
+#  answer_type   :integer          default("wrong"), not null
+#  display_order :bigint           default(0), not null
 #  statement     :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
@@ -20,8 +20,20 @@
 #
 class Answer < ApplicationRecord
   #
+  # constants and enum
+  #
+
+  enum answer_type: %i[wrong right]
+
+  #
   # associations
   #
 
   belongs_to :question
+
+  #
+  # validations
+  #
+
+  validates_presence_of :statement, :answer_type, :display_order
 end

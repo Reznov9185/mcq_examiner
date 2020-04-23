@@ -24,4 +24,10 @@ class Lesson < ApplicationRecord
 
   belongs_to :course
   has_many :questions, dependent: :destroy
+
+  #
+  # validations
+  #
+
+  validates_presence_of :name, :course_id
 end

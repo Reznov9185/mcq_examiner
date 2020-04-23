@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2020_04_22_144938) do
 
   create_table "answers", force: :cascade do |t|
     t.text "statement"
-    t.integer "display_order"
-    t.integer "answer_type"
+    t.bigint "display_order", default: 0, null: false
+    t.integer "answer_type", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "question_id", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_04_22_144938) do
   create_table "questions", force: :cascade do |t|
     t.text "statement"
     t.decimal "marks"
+    t.bigint "display_order", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "lesson_id", null: false

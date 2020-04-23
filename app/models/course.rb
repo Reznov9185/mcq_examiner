@@ -15,4 +15,10 @@ class Course < ApplicationRecord
   #
 
   has_many :lessons, dependent: :destroy
+
+  #
+  # validations
+  #
+
+  validates_presence_of :name
 end
