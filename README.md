@@ -18,7 +18,9 @@ Clone this repository,
 6. Run `rails db:seed` for seeding data as written in, `db/seeds.rb` file. For now one admin user with email: `admin@example.com` and password: `password` is created from it
 7. Finally run, `rails s`
 8. Hurray!
-9. Your site is up here, http://localhost:3000 and admin site is here, http://localhost:3000/admin!
+9. Your site is up here, 
+    * Exam Center: http://localhost:3000
+    * Admin Dashboard: http://localhost:3000/admin
 
 ##### Goals & Scope
 
@@ -34,12 +36,17 @@ Clone this repository,
 
 - `react.js`
 
-##### TODO
+##### TODO / Left out of `Scope`
 
 1. More `test` code coverage
 2. Integrate `deployment` tool like `capistrano` for easier deployments
 3. `CI/CD` integration
 4. Better understanding on `react.js`
+5. User based Exam Platform & Store Everything!
+6. More API robustness with more `react.js` components. More modularity needed.
+7. Unit testing and Other code coverages
+8. `code` refactoring
+9. Usage of modern `react.js` tools
 
 ###### Notes:
 * Make sure your default `3000` port is free, if not you can free it, or config app-server `puma` to run on another port.

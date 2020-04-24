@@ -43,7 +43,7 @@ class Answer < ApplicationRecord
   def to_s
     "Course#{question.lesson.course.id}: " + question.lesson.course.name + " -> " +
       "Lesson#{question.lesson.id}: " + question.lesson.name + " -> " +
-      "Question#{question.statement.id}: " + question.statement +
+      "Question#{question.id}: " + question.statement + " -> "
       "Answer#{id}: " + statement
   end
 end
