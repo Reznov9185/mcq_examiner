@@ -15,7 +15,10 @@ Clone this repository,
 3. Run `bundle install` once you are in the project `directory`
 4. See `database_example.yml`, copy it `database.yml` can connect to your `database` with right credentials like `username` and `password`
 5. Run `rails db:create` & `rails db:migrate` (check for any error on the way!)
-6. Finally run, `rails s`, Hurray!
+6. Run `rails db:seed` for seeding data as written in, `db/seeds.rb` file. For now one admin user with email: `admin@example.com` and password: `password` is created from it
+7. Finally run, `rails s`
+8. Hurray!
+9. Your site is up here, http://localhost:3000 and admin site is here, http://localhost:3000/admin!
 
 ##### Goals & Scope
 

@@ -20,6 +20,12 @@
 #
 class Question < ApplicationRecord
   #
+  # Class Configs
+  #
+
+  NUMBER_OF_PERMITTED_QUESTIONS = 10
+
+  #
   # associations
   #
 
@@ -31,4 +37,29 @@ class Question < ApplicationRecord
   #
 
   validates_presence_of :statement, :marks, :lesson_id, :display_order
+  validate :validate_questions_limit
+
+  #
+  # instance methods
+  #
+
+  def display_name
+    "Course(#{lesson.course.id}): " + lesson.course.name + " -> " +
+      "Lesson(#{lesson.id}): " + lesson.name + " -> " +
+      "Question(#{id}): " + statement
+  end
+
+  #
+  # private methods
+  #
+
+  private
+
+  def validate_questions_limit
+    if lesson.questions.size >= NUMBER_OF_PERMITTED_QUESTIONS
+      errors.add(:lesson,
+                 "Can't have more than
+                  #{NUMBER_OF_PERMITTED_QUESTIONS} questions per Lesson")
+    end
+  end
 end

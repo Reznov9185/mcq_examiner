@@ -30,4 +30,13 @@ class Lesson < ApplicationRecord
   #
 
   validates_presence_of :name, :course_id
+
+  #
+  # instance methods
+  #
+
+  def display_name
+    "Course(#{course.id}): " + course.name + " -> " +
+      "Lesson(#{id}): " + name
+  end
 end
