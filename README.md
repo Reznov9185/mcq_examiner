@@ -44,7 +44,7 @@ Clone this repository,
 4. Better understanding on `react.js`
 5. User based Exam Platform & Store Everything!
 6. More API robustness with more `react.js` components. More modularity needed.
-7. Unit testing and Other code coverages
+7. Better test coverage, `API` and `Controller` tests
 8. `code` refactoring
 9. Usage of modern `react.js` tools
 

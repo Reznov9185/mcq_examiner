@@ -36,7 +36,7 @@ class Question < ApplicationRecord
   # validations
   #
 
-  validates_presence_of :statement, :marks, :lesson_id, :display_order
+  validates_presence_of :statement, :lesson_id, :display_order
   validate :validate_questions_limit
 
   #
